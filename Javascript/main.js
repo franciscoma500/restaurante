@@ -151,5 +151,5 @@
             const mensagem = `Olá, gostaria de solicitar uma reserva:%0A%0A*Nome:* ${nome}%0A*Data:* ${data}%0A*Hora:* ${hora}%0A*Pessoas:* ${pessoas}%0A*Contato:* ${zap}`;
             const url = `https://wa.me/244951414234?text=${mensagem}`;
             
-            window.open(url, '_blank');
+            window.open(url, '_blank');  
         });
