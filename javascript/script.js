@@ -1,4 +1,9 @@
- // --- MENU MOBILE COM TROCA DE ÍCONE ---
+// --- Efeito ao carregar a página ---
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
+
+// --- MENU MOBILE COM TROCA DE ÍCONE ---
       const hamburger = document.querySelector(".hamburger");
       const navMenu = document.querySelector(".nav-menu");
 

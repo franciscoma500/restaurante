@@ -17,6 +17,12 @@ body {
   color: #1a1a1a;
   background-color: #ffffff;
   overflow-x: hidden;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+body.loaded {
+  opacity: 1;
 }
 
 /* --- GLOBAIS --- */
