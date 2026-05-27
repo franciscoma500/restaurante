@@ -34,7 +34,7 @@ window.addEventListener("load", () => {
       ScrollReveal().reveal(  
         ".hero-content, .sobre, .menu-card, .gallery-item, .reserva-box, .mapa, .contato-info",
         {
-          delay: 200,
+          delay: 400,
           distance: "50px",
           origin: "bottom",
           duration: 1000,
