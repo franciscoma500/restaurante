@@ -175,35 +175,6 @@ header {
   }
 }
 
-/* --- SOBRE --- */
-.sobre {
-  padding: 6rem 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
-
-  &-img {
-    img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 15px 15px 0 $primary-color;
-    }
-  }
-
-  &-text {
-    h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    p {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-      color: #555;
-    }
-  }
-}
 
 /* --- SECTION --- */
 .section-padding {
@@ -304,6 +275,36 @@ header {
   color: $primary;
   font-size: 1.2rem;
 }
+/* --- SOBRE --- */
+.sobre {
+  padding: 6rem 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+
+  &-img {
+    img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 15px 15px 0 $primary-color;
+    }
+  }
+
+  &-text {
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: #555;
+    }
+  }
+}
+
 
 /* --- GALERIA --- */
 .galeria {
