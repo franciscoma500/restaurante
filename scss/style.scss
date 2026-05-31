@@ -385,44 +385,7 @@ input {
   color: $dark-color;
   &:focus { outline: 2px solid $primary-color; }
 }
-/* --- CORREÇÃO DE ÍCONES DE DATA/HORA PARA MOBILE --- */
-.input-icon-wrapper {
-  position: relative;
-  width: 100%;
 
-  .input-icon {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #888; // Cor neutra para o ícone
-    pointer-events: none; // Permite que o clique passe através do ícone para abrir o calendário
-    font-size: 1.1rem;
-    z-index: 2;
-  }
-
-  input[type="date"],
-  input[type="time"] {
-    padding-right: 40px; // Abre espaço para o ícone não chocar com o texto
-    position: relative;
-    background: $white;
-
-    /* Remove os ícones nativos do PC (opcional, para padronizar com o teu novo ícone) */
-    &::-webkit-calendar-picker-indicator {
-      background: transparent;
-      bottom: 0;
-      color: transparent;
-      cursor: pointer;
-      height: auto;
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: auto;
-      z-index: 1;
-    }
-  }
-}
 
 /* --- CONTATO --- */
 .contato {

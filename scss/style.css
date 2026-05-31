@@ -394,43 +394,6 @@ input:focus {
   outline: 2px solid #D35400;
 }
 
-/* --- CORREÇÃO DE ÍCONES DE DATA/HORA PARA MOBILE --- */
-.input-icon-wrapper {
-  position: relative;
-  width: 100%;
-}
-.input-icon-wrapper .input-icon {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #888;
-  pointer-events: none;
-  font-size: 1.1rem;
-  z-index: 2;
-}
-.input-icon-wrapper input[type=date],
-.input-icon-wrapper input[type=time] {
-  padding-right: 40px;
-  position: relative;
-  background: #ffffff;
-  /* Remove os ícones nativos do PC (opcional, para padronizar com o teu novo ícone) */
-}
-.input-icon-wrapper input[type=date]::-webkit-calendar-picker-indicator,
-.input-icon-wrapper input[type=time]::-webkit-calendar-picker-indicator {
-  background: transparent;
-  bottom: 0;
-  color: transparent;
-  cursor: pointer;
-  height: auto;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: auto;
-  z-index: 1;
-}
-
 /* --- CONTATO --- */
 .contato {
   padding: 6rem 20px;
