@@ -165,320 +165,272 @@
 </script>
   </head>
   <body>
-  <!-- =====================================================
-     CABEÇALHO (HEADER)
-     Contém a navegação principal e o logótipo do restaurante.
-===================================================== -->
-<header id="header">
+    <header id="header">
+      <nav class="container">
+        <a href="#" class="logo" title="Sabor & Arte Home"
+          >Sabor<span>&</span>Arte</a
+        >
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#cardapio">Menu</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#reserva">Reserva</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <button
+          class="hamburger"
+          aria-label="Abrir menu de navegação"
+          aria-expanded="false"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
+    </header>
 
-  <!-- Barra de navegação principal -->
-  <nav class="container">
-
-    <!-- Logótipo da marca -->
-    <a href="#" class="logo" title="Sabor & Arte Home">
-      Sabor<span>&</span>Arte
-    </a>
-
-    <!-- Menu de navegação -->
-    <ul class="nav-menu">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#cardapio">Menu</a></li>
-      <li><a href="#galeria">Galeria</a></li>
-      <li><a href="#reserva">Reserva</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-
-    <!-- Botão Hamburger (visível em dispositivos móveis) -->
-    <button
-      class="hamburger"
-      aria-label="Abrir menu de navegação"
-      aria-expanded="false"
-    >
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-
-  </nav>
-</header>
-
-<!-- =====================================================
-     CONTEÚDO PRINCIPAL DO WEBSITE
-===================================================== -->
-<main>
-
-  <!-- =====================================================
-       HERO SECTION
-       Secção principal de apresentação do restaurante.
-  ===================================================== -->
-  <section class="hero" id="home">
-    <div class="hero-content container">
-
-      <!-- Título principal -->
-      <h1>Bem-vindo ao Restaurante Sabor & Arte</h1>
-
-      <!-- Slogan -->
-      <p>Onde a sofisticação encontra os sabores autênticos de Angola.</p>
-
-      <!-- Botões de ação -->
-      <div class="hero-btns">
-        <a href="#cardapio" class="btn btn-primary">Conhecer Menu</a>
-        <a href="#reserva" class="btn btn-outline">Reservar Agora</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- =====================================================
-       CARDÁPIO
-       Exibe os pratos disponíveis e filtros por categoria.
-  ===================================================== -->
-  <section class="section-padding" id="cardapio">
-
-    <h2 class="section-title">Nosso Cardápio</h2>
-
-    <!-- Botões de filtragem -->
-    <div class="filter-buttons">
-      <button class="filter-btn active" data-filter="todos">Todos</button>
-      <button class="filter-btn" data-filter="entrada">Entradas</button>
-      <button class="filter-btn" data-filter="principal">
-        Pratos Principais
-      </button>
-      <button class="filter-btn" data-filter="sobremesa">
-        Sobremesas
-      </button>
-    </div>
-
-    <!-- Os pratos serão inseridos dinamicamente via JavaScript -->
-    <div class="menu-grid" id="menu-container"></div>
-
-  </section>
-
-  <!-- =====================================================
-       SOBRE O RESTAURANTE
-       História, missão e identidade da marca.
-  ===================================================== -->
-  <section class="sobre container" id="sobre">
-
-    <!-- Imagem institucional -->
-    <div class="sobre-img">
-      <img
-        src="https://media.istockphoto.com/id/1174700758/pt/foto/portrait-of-african-ethnicity-waitress-owner-at-restaurant.webp?a=1&b=1&s=612x612&w=0&k=20&c=tMx_hBb0MHHTnyjGozPYfXoJHfqCw6umAw2s7OonebY="
-        alt="Salão principal elegante do restaurante Sabor e Arte em Luanda"
-        loading="lazy"
-      />
-    </div>
-
-    <!-- Texto institucional -->
-    <div class="sobre-text">
-
-      <h2>Nossa História</h2>
-
-      <p>
-        Localizado no coração de Luanda, o Restaurante Sabor & Arte nasceu
-        da visão de unir a técnica gastronómica internacional aos
-        ingredientes mais frescos do nosso solo.
-      </p>
-
-      <p>
-        Nossa missão é proporcionar não apenas uma refeição, mas uma
-        experiência sensorial completa em um ambiente que respira arte e
-        elegância.
-      </p>
-
-      <!-- Botão para secção de contacto -->
-      <a href="#contato" class="btn btn-primary" style="margin-top: 1rem">
-        Onde Estamos
-      </a>
-
-    </div>
-  </section>
-
-  <!-- =====================================================
-       GALERIA
-       Exposição visual do restaurante e dos pratos.
-  ===================================================== -->
-  <section class="galeria" id="galeria">
-
-    <div class="container">
-
-      <h2 class="section-title">Nossa Casa</h2>
-
-      <!-- Grade de imagens -->
-      <div class="gallery-grid">
-
-        <div class="gallery-item">
-          <img
-            src="..."
-            alt="Ambiente interno sofisticado e mesas do restaurante Sabor e Arte"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="gallery-item">
-          <img
-            src="..."
-            alt="Chefs contemporâneos preparando pratos finos na cozinha"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="gallery-item">
-          <img
-            src="..."
-            alt="Prato gourmet de alta gastronomia finalizado"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="gallery-item">
-          <img
-            src="..."
-            alt="Garrafeira com seleção de vinhos exclusivos do restaurante"
-            loading="lazy"
-          />
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- =====================================================
-       RESERVAS
-       Formulário para envio de reservas via WhatsApp.
-  ===================================================== -->
-  <section class="reserva" id="reserva">
-
-    <div class="container">
-
-      <div class="reserva-box">
-
-        <h2>Garanta sua Mesa</h2>
-
-        <p>Faça sua reserva online de forma rápida e segura.</p>
-
-        <form id="reservaForm">
-
-          <!-- Nome do cliente -->
-          <label for="nome" class="sr-only">Seu Nome Completo</label>
-          <input type="text" id="nome" placeholder="Seu Nome" required />
-
-          <!-- WhatsApp e quantidade de pessoas -->
-          <div class="form-group">
-
-            <label for="whatsapp" class="sr-only">
-              Número de WhatsApp
-            </label>
-
-            <input
-              type="tel"
-              id="whatsapp"
-              placeholder="WhatsApp (9xx xxx xxx)"
-              required
-            />
-
-            <label for="pessoas" class="sr-only">
-              Quantidade de Pessoas
-            </label>
-
-            <input
-              type="number"
-              id="pessoas"
-              placeholder="Nº de Pessoas"
-              min="1"
-              max="20"
-              required
-            />
-
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content container">
+          <h1>Bem-vindo ao Restaurante Sabor & Arte</h1>
+          <p>Onde a sofisticação encontra os sabores autênticos de Angola.</p>
+          <div class="hero-btns">
+            <a href="#cardapio" class="btn btn-primary">Conhecer Menu</a>
+            <a href="#reserva" class="btn btn-outline">Reservar Agora</a>
           </div>
+        </div>
+      </section>
 
-          <!-- Data da reserva -->
-          <div class="input-icon">
-            <input type="date" id="data" required />
-            <i class="fas fa-calendar-alt"></i>
-          </div>
+      <section class="section-padding" id="cardapio">
+        <h2 class="section-title">Nosso Cardápio</h2>
 
-          <!-- Hora da reserva -->
-          <div class="input-icon">
-            <input type="time" id="hora" required />
-            <i class="fas fa-clock"></i>
-          </div>
-
-          <!-- Botão de envio -->
-          <button type="submit" class="btn btn-primary">
-            Solicitar Via WhatsApp
-            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="entrada">Entradas</button>
+          <button class="filter-btn" data-filter="principal">
+            Pratos Principais
           </button>
+          <button class="filter-btn" data-filter="sobremesa">Sobremesas</button>
+        </div>
 
-        </form>
+        <div class="menu-grid" id="menu-container"></div>
+      </section>
 
+      <section class="sobre container" id="sobre">
+        <div class="sobre-img">
+          <img
+            src="https://media.istockphoto.com/id/1174700758/pt/foto/portrait-of-african-ethnicity-waitress-owner-at-restaurant.webp?a=1&b=1&s=612x612&w=0&k=20&c=tMx_hBb0MHHTnyjGozPYfXoJHfqCw6umAw2s7OonebY="
+            alt="Salão principal elegante do restaurante Sabor e Arte em Luanda"
+            loading="lazy"
+          />
+        </div>
+        <div class="sobre-text">
+          <h2>Nossa História</h2>
+          <p>
+            Localizado no coração de Luanda, o Restaurante Sabor & Arte nasceu
+            da visão de unir a técnica gastronómica internacional aos
+            ingredientes mais frescos do nosso solo.
+          </p>
+          <p>
+            Nossa missão é proporcionar não apenas uma refeição, mas uma
+            experiência sensorial completa em um ambiente que respira arte e
+            elegância. Selecionamos rigorosamente nossos produtores locais para
+            garantir que apenas o melhor chegue à sua mesa.
+          </p>
+          <a href="#contato" class="btn btn-primary" style="margin-top: 1rem"
+            >Onde Estamos</a
+          >
+        </div>
+      </section>
+
+      <section class="galeria" id="galeria">
+        <div class="container">
+          <h2 class="section-title">Nossa Casa</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=60"
+                alt="Ambiente interno sofisticado e mesas do restaurante Sabor e Arte"
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=400&q=60"
+                alt="Chefs contemporâneos preparando pratos finos na cozinha"
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=400&q=60"
+                alt="Prato gourmet de alta gastronomia finalizado"
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=400&q=60"
+                alt="Garrafeira com seleção de vinhos exclusivos do restaurante"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reserva" id="reserva">
+        <div class="container">
+          <div class="reserva-box">
+            <h2>Garanta sua Mesa</h2>
+            <p>Faça sua reserva online de forma rápida e segura.</p>
+            <form id="reservaForm">
+              <label for="nome" class="sr-only">Seu Nome Completo</label>
+              <input type="text" id="nome" placeholder="Seu Nome" required />
+
+              <div class="form-group">
+                <label for="whatsapp" class="sr-only">Número de WhatsApp</label>
+                <input
+                  type="tel"
+                  id="whatsapp"
+                  placeholder="WhatsApp (9xx xxx xxx)"
+                  required
+                />
+
+                <label for="pessoas" class="sr-only"
+                  >Quantidade de Pessoas</label
+                >
+                <input
+                  type="number"
+                  id="pessoas"
+                  placeholder="Nº de Pessoas"
+                  min="1"
+                  max="20"
+                  required
+                />
+              </div>
+
+              <div class="input-icon">
+                <input type="date" id="data" required />
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+
+              <div class="input-icon">
+                <input type="time" id="hora" required />
+                <i class="fas fa-clock"></i>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Solicitar Via WhatsApp
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="contato container" id="contato">
+        <div class="contato-info">
+          <h2>Contato</h2>
+          <p>
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Av. 4 de
+            Fevereiro, Marginal de Luanda, Angola
+          </p>
+          <p>
+            <i class="fas fa-phone" aria-hidden="true"></i> (+244) 951-414-234
+          </p>
+          <p>
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            reservas@saborearte.com
+          </p>
+          <p>
+            <i class="fas fa-clock" aria-hidden="true"></i> Ter - Dom: 12:00 -
+            23:30
+          </p>
+        </div>
+        <div class="mapa">
+          <iframe
+            src="https://maps.google.com/maps?q=Marginal%20de%20Luanda&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="350"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa com localização do Restaurante Sabor e Arte na Marginal de Luanda"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-premium">
+      <div class="container footer-grid">
+        <div class="footer-col branding">
+          <a href="#" class="logo">Sabor<span>&</span>Arte</a>
+          <p class="footer-tagline">
+            Onde a sofisticação encontra os sabores autênticos de Angola na
+            Marginal de Luanda.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Aceder ao nosso Instagram"
+              ><i class="fab fa-instagram" aria-hidden="true"></i
+            ></a>
+            <a href="#" aria-label="Aceder ao nosso Facebook"
+              ><i class="fab fa-facebook" aria-hidden="true"></i
+            ></a>
+            <a href="#" aria-label="Falar connosco pelo WhatsApp"
+              ><i class="fab fa-whatsapp" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Navegação</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Nossa História</a></li>
+            <li><a href="#cardapio">Nosso Menu</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#reserva">Fazer Reserva</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contactos</h3>
+          <p class="footer-info-text">
+            <i class="fas fa-phone" aria-hidden="true"></i> (+244) 951-414-234
+          </p>
+          <p class="footer-info-text">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            reservas@saborearte.com
+          </p>
+          <p class="footer-info-text">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Av. 4 de
+            Fevereiro, Luanda
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Horário</h3>
+          <ul class="footer-hours">
+            <li><span>Terça a Quinta:</span> 12:00 - 23:00</li>
+            <li><span>Sexta e Sábado:</span> 12:00 - 00:30</li>
+            <li><span>Domingo:</span> 12:00 - 22:00</li>
+            <li class="closed"><span>Segunda-feira:</span> Encerrado</li>
+          </ul>
+        </div>
       </div>
 
-    </div>
-  </section>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>
+            &copy; 2026 Restaurante Sabor & Arte. Todos os direitos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
 
-  <!-- =====================================================
-       CONTACTOS E LOCALIZAÇÃO
-       Informações de contacto e mapa do restaurante.
-  ===================================================== -->
-  <section class="contato container" id="contato">
-
-    <!-- Informações de contacto -->
-    <div class="contato-info">
-      <h2>Contato</h2>
-
-      <p>
-        <i class="fas fa-map-marker-alt"></i>
-        Av. 4 de Fevereiro, Marginal de Luanda, Angola
-      </p>
-
-      <p>
-        <i class="fas fa-phone"></i>
-        (+244) 951-414-234
-      </p>
-
-      <p>
-        <i class="fas fa-envelope"></i>
-        reservas@saborearte.com
-      </p>
-
-      <p>
-        <i class="fas fa-clock"></i>
-        Ter - Dom: 12:00 - 23:30
-      </p>
-    </div>
-
-    <!-- Mapa incorporado -->
-    <div class="mapa">
-      <iframe
-        src="https://maps.google.com/maps?q=Marginal%20de%20Luanda&t=&z=15&ie=UTF8&iwloc=&output=embed"
-        title="Mapa com localização do Restaurante Sabor e Arte"
-      ></iframe>
-    </div>
-
-  </section>
-
-</main>
-
-<!-- =====================================================
-     RODAPÉ (FOOTER)
-     Informações institucionais, redes sociais,
-     navegação e horário de funcionamento.
-===================================================== -->
-<footer class="footer-premium">
-  ...
-</footer>
-
-<!-- =====================================================
-     BIBLIOTECAS E SCRIPTS
-===================================================== -->
-
-<!-- Biblioteca de animações ao scroll -->
-<script defer src="https://unpkg.com/scrollreveal"></script>
-
-<!-- Script principal do projeto -->
-<script defer src="./javascript/script.js"></script>
+    <script defer src="https://unpkg.com/scrollreveal"></script>
+    <script defer src="./javascript/script.js"></script>
   </body>
 </html>
