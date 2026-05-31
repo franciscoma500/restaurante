@@ -25,7 +25,6 @@ body {
   font-family: $font-body;
   line-height: 1.6;
   color: $dark-color;
-  background-color: $light-color; 
   overflow-x: hidden;
 
 }
@@ -474,13 +473,12 @@ footer {
     width: 100%; 
     transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     z-index: 1001;
-    padding: 4rem;
+    padding: 4rem 4rem 0 4.2rem;
     
     &.active { left: 0; }
 
     li {
       margin: 1.2rem 0 ;
-   border:1px solid red; 
       width: 100%;
       text-align: center;
 
