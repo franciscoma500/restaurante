@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" />
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    />
 
-    <title>Sabor & Arte | Restaurante de Gastronomia Contemporânea em Luanda</title>
-    <meta name="theme-color" content="#D35400">
-    <meta name="author" content="Francisco Manuel Armando">
+    <title>
+      Sabor & Arte | Restaurante de Gastronomia Contemporânea em Luanda
+    </title>
+    <meta name="theme-color" content="#D35400" />
+    <meta name="author" content="Francisco Manuel Armando" />
     <meta
       name="description"
       content="Desfrute da melhor gastronomia contemporânea no coração de Luanda. O Restaurante Sabor & Arte une técnicas internacionais aos ingredientes frescos de Angola. Faça a sua reserva!"
@@ -17,11 +23,20 @@
       content="Restaurante Sabor e Arte, Restaurante Luanda, Gastronomia Angola, Comida Contemporânea Luanda, Jantar Marginal Luanda, Reservar Restaurante Luanda"
     />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://franciscoma500.github.io/restaurante/" />
+    <link
+      rel="canonical"
+      href="https://franciscoma500.github.io/restaurante/"
+    />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://franciscoma500.github.io/restaurante/" />
-    <meta property="og:title" content="Sabor & Arte | Gastronomia Contemporânea em Luanda" />
+    <meta
+      property="og:url"
+      content="https://franciscoma500.github.io/restaurante/"
+    />
+    <meta
+      property="og:title"
+      content="Sabor & Arte | Gastronomia Contemporânea em Luanda"
+    />
     <meta
       property="og:description"
       content="Onde a sofisticação encontra os sabores autênticos de Angola. Conheça o nosso menu e reserve a sua mesa online."
@@ -32,7 +47,10 @@
     />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Sabor & Arte | Gastronomia Contemporânea em Luanda" />
+    <meta
+      name="twitter:title"
+      content="Sabor & Arte | Gastronomia Contemporânea em Luanda"
+    />
     <meta
       name="twitter:description"
       content="Onde a sofisticação encontra os sabores autênticos de Angola. Conheça o nosso menu e reserve a sua mesa online."
@@ -55,7 +73,9 @@
   <body>
     <header id="header">
       <nav class="container">
-        <a href="#" class="logo" title="Sabor & Arte Home">Sabor<span>&</span>Arte</a>
+        <a href="#" class="logo" title="Sabor & Arte Home"
+          >Sabor<span>&</span>Arte</a
+        >
         <ul class="nav-menu">
           <li><a href="#home">Home</a></li>
           <li><a href="#sobre">Sobre</a></li>
@@ -94,7 +114,9 @@
         <div class="filter-buttons">
           <button class="filter-btn active" data-filter="todos">Todos</button>
           <button class="filter-btn" data-filter="entrada">Entradas</button>
-          <button class="filter-btn" data-filter="principal">Pratos Principais</button>
+          <button class="filter-btn" data-filter="principal">
+            Pratos Principais
+          </button>
           <button class="filter-btn" data-filter="sobremesa">Sobremesas</button>
         </div>
 
@@ -122,7 +144,9 @@
             elegância. Selecionamos rigorosamente nossos produtores locais para
             garantir que apenas o melhor chegue à sua mesa.
           </p>
-          <a href="#contato" class="btn btn-primary" style="margin-top: 1rem">Onde Estamos</a>
+          <a href="#contato" class="btn btn-primary" style="margin-top: 1rem"
+            >Onde Estamos</a
+          >
         </div>
       </section>
 
@@ -172,31 +196,19 @@
               <input type="text" id="nome" placeholder="Seu Nome" required />
 
               <div class="form-group">
-                <label for="whatsapp" class="sr-only">Número de WhatsApp</label>
-                <input
-                  type="tel"
-                  id="whatsapp"
-                  placeholder="WhatsApp (9xx xxx xxx)"
-                  required
-                />
+                <div class="input-icon-wrapper">
+                  <label for="data" class="sr-only">Data da Reserva</label>
+                  <i class="fas fa-calendar-alt input-icon"></i>
+                  <input type="date" id="data" required />
+                </div>
 
-                <label for="pessoas" class="sr-only">Quantidade de Pessoas</label>
-                <input
-                  type="number"
-                  id="pessoas"
-                  placeholder="Nº de Pessoas"
-                  min="1"
-                  max="20"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="data" class="sr-only">Data da Reserva</label>
-                <input type="date" id="data" required />
-
-                <label for="hora" class="sr-only">Horário do Jantar ou Almoço</label>
-                <input type="time" id="hora" required />
+                <div class="input-icon-wrapper">
+                  <label for="hora" class="sr-only"
+                    >Horário do Jantar ou Almoço</label
+                  >
+                  <i class="fas fa-clock input-icon"></i>
+                  <input type="time" id="hora" required />
+                </div>
               </div>
 
               <button type="submit" class="btn btn-primary">
@@ -246,11 +258,20 @@
       <div class="container footer-grid">
         <div class="footer-col branding">
           <a href="#" class="logo">Sabor<span>&</span>Arte</a>
-          <p class="footer-tagline">Onde a sofisticação encontra os sabores autênticos de Angola na Marginal de Luanda.</p>
+          <p class="footer-tagline">
+            Onde a sofisticação encontra os sabores autênticos de Angola na
+            Marginal de Luanda.
+          </p>
           <div class="social-links">
-            <a href="#" aria-label="Aceder ao nosso Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            <a href="#" aria-label="Aceder ao nosso Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-            <a href="#" aria-label="Falar connosco pelo WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Aceder ao nosso Instagram"
+              ><i class="fab fa-instagram" aria-hidden="true"></i
+            ></a>
+            <a href="#" aria-label="Aceder ao nosso Facebook"
+              ><i class="fab fa-facebook" aria-hidden="true"></i
+            ></a>
+            <a href="#" aria-label="Falar connosco pelo WhatsApp"
+              ><i class="fab fa-whatsapp" aria-hidden="true"></i
+            ></a>
           </div>
         </div>
 
@@ -267,9 +288,17 @@
 
         <div class="footer-col">
           <h3>Contactos</h3>
-          <p class="footer-info-text"><i class="fas fa-phone" aria-hidden="true"></i> (+244) 951-414-234</p>
-          <p class="footer-info-text"><i class="fas fa-envelope" aria-hidden="true"></i> reservas@saborearte.com</p>
-          <p class="footer-info-text"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Av. 4 de Fevereiro, Luanda</p>
+          <p class="footer-info-text">
+            <i class="fas fa-phone" aria-hidden="true"></i> (+244) 951-414-234
+          </p>
+          <p class="footer-info-text">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            reservas@saborearte.com
+          </p>
+          <p class="footer-info-text">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Av. 4 de
+            Fevereiro, Luanda
+          </p>
         </div>
 
         <div class="footer-col">
@@ -285,7 +314,9 @@
 
       <div class="footer-bottom">
         <div class="container">
-          <p>&copy; 2026 Restaurante Sabor & Arte. Todos os direitos reservados.</p>
+          <p>
+            &copy; 2026 Restaurante Sabor & Arte. Todos os direitos reservados.
+          </p>
         </div>
       </div>
     </footer>
