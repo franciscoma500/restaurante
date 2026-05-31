@@ -618,7 +618,7 @@ input {
 }
 
 @media (max-width: 480px) {
-  .container { padding: 50px 15px; }
+  .container { padding: 0  15px; }
   .section-title { font-size: 2rem; margin-bottom: 2rem; }
   .form-group { grid-template-columns: 1fr; gap: 1rem; }
   .reserva-box { padding: 2rem 1rem; }
@@ -628,7 +628,13 @@ input {
     align-items: stretch;
     .btn { text-align: center; width: 100%; }
   }
-
+  .contato {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 4rem 20px;
+    gap: 50px;
+  } 
+ 
   /* Footer mobile */
   .footer-premium {
     padding-top: 3.5rem;
