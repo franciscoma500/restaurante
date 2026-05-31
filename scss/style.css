@@ -493,6 +493,7 @@ footer {
   }
   .nav-menu li {
     margin: 1.2rem 0;
+    border: 1px solid red;
     width: 100%;
     text-align: center;
   }

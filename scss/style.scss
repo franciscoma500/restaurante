@@ -479,7 +479,8 @@ footer {
     &.active { left: 0; }
 
     li {
-      margin: 1.2rem 0;
+      margin: 1.2rem 0 ;
+   border:1px solid red; 
       width: 100%;
       text-align: center;
 
@@ -490,7 +491,7 @@ footer {
         margin-left: 0;
         display: inline-block;
         width: auto;
-
+          
         &:hover { color: $primary-color; }
       }
     }
