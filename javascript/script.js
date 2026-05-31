@@ -1,7 +1,4 @@
-// --- Efeito ao carregar a página ---
-window.addEventListener("load", () => {
-  document.body.classList.add("loaded");
-});
+
 
 // --- MENU MOBILE ---
 const hamburger = document.querySelector(".hamburger");
