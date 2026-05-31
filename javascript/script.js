@@ -172,15 +172,7 @@ filterBtns.forEach((btn) => {
 window.addEventListener("DOMContentLoaded", () => {
   displayMenuItems(cardapioItems);
 });
-flatpickr("#data", {
-  dateFormat: "d/m/Y"
-});
 
-flatpickr("#hora", {
-  enableTime: true,
-  noCalendar: true,
-  dateFormat: "H:i"
-});
 // --- RESERVA VIA WHATSAPP ---
 document.getElementById('reservaForm').addEventListener('submit', function(e) {
   e.preventDefault();
