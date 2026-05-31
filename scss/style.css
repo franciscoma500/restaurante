@@ -381,33 +381,6 @@ header.scrolled .bar {
   gap: 1.2rem;
 }
 
-.input-icon {
-  position: relative;
-  width: 100%;
-}
-.input-icon input {
-  width: 100%;
-  padding-right: 45px;
-}
-.input-icon i {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #D35400;
-  pointer-events: none;
-  font-size: 1rem;
-}
-
-input[type=date]::-webkit-calendar-picker-indicator,
-input[type=time]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
 input {
   padding: 0.9rem;
   border: 1px solid transparent;
@@ -419,6 +392,13 @@ input {
 }
 input:focus {
   outline: 2px solid #D35400;
+}
+
+input[type=date] {
+  background-image: url("https://fonts.gstatic.com/s/i/materialiconsoutlined/calendar_today/v15/24px.svg");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 18px;
 }
 
 /* --- CONTATO --- */
