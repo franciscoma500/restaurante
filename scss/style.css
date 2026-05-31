@@ -418,7 +418,7 @@ input:focus {
   transform: translateY(-50%);
   z-index: 2;
   pointer-events: none;
-  color: #D35400;
+  color: #1a1a1a;
 }
 
 /* --- CONTATO --- */
