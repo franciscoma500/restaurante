@@ -393,11 +393,6 @@ input {
 input:focus {
   outline: 2px solid #D35400;
 }
-input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
 
 /* --- CONTATO --- */
 .contato {
