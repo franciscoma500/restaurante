@@ -1,8 +1,12 @@
-
-
-// --- MENU MOBILE ---
+// --- MENU MOBILE COM FILTRO DE ESTADO DINÂMICO (RESIZE OBSERVER) ---
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
+
+function fecharMenuMobile() {
+  hamburger.setAttribute("aria-expanded", "false");
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}
 
 hamburger.addEventListener("click", () => {
   const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
@@ -11,15 +15,21 @@ hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
-// Fechar menu móvel ao clicar nos links
 document.querySelectorAll(".nav-menu li a").forEach((link) => {
   link.addEventListener("click", () => {
     if (navMenu.classList.contains("active")) {
-      hamburger.setAttribute("aria-expanded", "false");
-      hamburger.classList.remove("active");
-      navMenu.classList.remove("active");
+      fecharMenuMobile();
     }
   });
+});
+
+// Remove classes residuais de colisão de cor se o ecrã for esticado aberto
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 960) {
+    if (navMenu.classList.contains("active")) {
+      fecharMenuMobile();
+    }
+  }
 });
 
 // --- HEADER SCROLL EFFECT ---
@@ -33,7 +43,23 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// --- SCROLL REVEAL (ANIMAÇÕES GLOBAIS) ---
+// --- BLOQUEIO DE DATAS PASSADAS ---
+window.addEventListener("DOMContentLoaded", () => {
+  const dataInput = document.getElementById("data");
+  if (dataInput) {
+    const hoje = new Date();
+    const ano = hoje.getFullYear();
+    let mes = hoje.getMonth() + 1;
+    let dia = hoje.getDate();
+
+    if (mes < 10) mes = "0" + mes;
+    if (dia < 10) dia = "0" + dia;
+
+    dataInput.min = `${ano}-${mes}-${dia}`;
+  }
+});
+
+// --- SCROLL REVEAL ---
 ScrollReveal().reveal(
   ".hero-content, .sobre, .section-title, .filter-buttons, .gallery-item, .reserva-box, .mapa, .contato-info",
   {
@@ -44,7 +70,7 @@ ScrollReveal().reveal(
   }
 );
 
-// --- DADOS DO CARDÁPIO OTIMIZADOS ---
+// --- DADOS DO CARDÁPIO ---
 const cardapioItems = [
   {
     id: 1,
@@ -99,12 +125,11 @@ const cardapioItems = [
 const menuContainer = document.getElementById("menu-container");
 const filterBtns = document.querySelectorAll(".filter-btn");
 
-// Renderização e controle de concorrência do ScrollReveal
 function displayMenuItems(items) {
   let displayMenu = items.map(function (item) {
     return `
       <article class="menu-card">
-        <img src="${item.img}" alt="${item.nome}">
+        <img src="${item.img}" alt="Prato do menu: ${item.nome}" loading="lazy" decoding="async">
         <div class="menu-info">
           <h3>
             ${item.nome}
@@ -118,7 +143,6 @@ function displayMenuItems(items) {
 
   menuContainer.innerHTML = displayMenu;
 
-  // Reseta instâncias antigas para evitar bugs de cards invisíveis ao filtrar
   ScrollReveal().clean(".menu-card");
   ScrollReveal().reveal(".menu-card", {
     delay: 100,
@@ -129,13 +153,13 @@ function displayMenuItems(items) {
   });
 }
 
-// Filtro do Menu Dinâmico
+// Filtro seguro com currentTarget
 filterBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     filterBtns.forEach((b) => b.classList.remove("active"));
-    e.target.classList.add("active");
+    e.currentTarget.classList.add("active");
 
-    const categoria = e.target.dataset.filter;
+    const categoria = e.currentTarget.dataset.filter;
     if (categoria === "todos") {
       displayMenuItems(cardapioItems);
     } else {
@@ -149,7 +173,7 @@ window.addEventListener("DOMContentLoaded", () => {
   displayMenuItems(cardapioItems);
 });
 
-// --- RESERVA VIA WHATSAPP OTIMIZADA E CORRIGIDA ---
+// --- RESERVA VIA WHATSAPP ---
 document.getElementById('reservaForm').addEventListener('submit', function(e) {
   e.preventDefault();
   const nome = document.getElementById('nome').value;
@@ -158,21 +182,21 @@ document.getElementById('reservaForm').addEventListener('submit', function(e) {
   const hora = document.getElementById('hora').value;
   const pessoas = document.getElementById('pessoas').value;
 
-  // Limpa caracteres especiais introduzidos pelo utilizador apenas para validação
   zapCliente = zapCliente.replace(/\D/g, ''); 
 
-  if (zapCliente.length !== 9) {
-    alert("Por favor, introduza um número válido com exatamente 9 dígitos.");
+  if (zapCliente.startsWith('244') && zapCliente.length === 12) {
+    zapCliente = zapCliente.substring(3);
+  }
+
+  if (zapCliente.length !== 9 || !zapCliente.startsWith('9')) {
+    alert("Por favor, introduza um número de WhatsApp válido de Angola com 9 dígitos (ex: 9xxxxxxxx).");
     return;
   }
 
-  // Formata a data de AAAA-MM-DD para DD/MM/AAAA
   const dataFormatada = dataRaw.split('-').reverse().join('/');
-
-  // O número oficial do restaurante (Marginal de Luanda) limpo
   const numeroRestaurante = "244951414234";
 
-  const mensagem = `Olá, gostaria de solicitar uma reserva:%0A%0A*Nome:* ${nome}%0A*Data:* ${dataFormatada}%0A*Hora:* ${hora}%0A*Pessoas:* ${pessoas}%0A*Contacto do Cliente:* ${zapCliente}`;
+  const mensagem = `Olá, gostaria de solicitar uma reserva:%0A%0A*Nome:* ${nome}%0A*Data:* ${dataFormatada}%0A*Hora:* ${hora}%0A*Pessoas:* ${pessoas}%0A*Contacto do Cliente:* +244 ${zapCliente}`;
   const url = `https://wa.me/${numeroRestaurante}?text=${mensagem}`;
   
   window.open(url, '_blank');  
