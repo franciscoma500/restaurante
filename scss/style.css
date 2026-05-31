@@ -624,7 +624,7 @@ input:focus {
 }
 @media (max-width: 480px) {
   .container {
-    padding: 0 15px;
+    padding: 50px 15px;
   }
   .section-title {
     font-size: 2rem;

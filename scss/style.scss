@@ -618,7 +618,7 @@ input {
 }
 
 @media (max-width: 480px) {
-  .container { padding: 0 15px; }
+  .container { padding: 50px 15px; }
   .section-title { font-size: 2rem; margin-bottom: 2rem; }
   .form-group { grid-template-columns: 1fr; gap: 1rem; }
   .reserva-box { padding: 2rem 1rem; }
