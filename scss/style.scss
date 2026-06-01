@@ -654,6 +654,19 @@ input {
     align-items: stretch;
     .btn { text-align: center; width: 100%; }
   }
+   .sobre {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 4rem 20px;
+
+    .sobre-img {
+      margin-bottom: -1rem; 
+      img { 
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+        max-width: 100%;
+      }
+    }
+  }
   .contato {
     grid-template-columns: 1fr;
     text-align: center;
