@@ -679,7 +679,7 @@ input:focus {
     padding: 4rem 20px;
   }
   .sobre .sobre-img {
-    margin-bottom: -1rem;
+    margin-bottom: 1rem;
   }
   .sobre .sobre-img img {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
